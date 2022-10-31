@@ -289,6 +289,16 @@ def train_embedding(embedding_name, learn_rate, batch_size, data_root, log_direc
         pbar.set_description(f"[Epoch {epoch_num}: {epoch_step}/{len(ds)}]loss: {losses.mean():.7f}")
 
         if embedding.step > 0 and embedding_dir is not None and embedding.step % save_embedding_every == 0:
+            checkpoint = sd_models.select_checkpoint()
+
+            embedding.sd_checkpoint = checkpoint.hash
+            embedding.sd_checkpoint_name = checkpoint.model_name
+            embedding.cached_checksum = None
+            # Before saving for the last time, change name back to base name (as opposed to the save_embedding_every step-suffixed naming convention).
+            embedding.name = embedding_name
+            filename = os.path.join(shared.cmd_opts.embeddings_dir, f'{embedding.name}.pt')
+            embedding.save(filename)
+
             # Before saving, change name to match current checkpoint.
             embedding.name = f'{embedding_name}-{embedding.step}'
             last_saved_file = os.path.join(embedding_dir, f'{embedding.name}.pt')
