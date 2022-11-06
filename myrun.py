@@ -36,7 +36,7 @@ from modules.paths import script_path
 from modules.shared import cmd_opts
 import modules.hypernetworks.hypernetwork
 
-DATASET_DIRECTORY = '/data/sync/pc_sync/novelai'
+DATASET_DIRECTORY = '/data/sync/pc_sync/novelai/datasets'
 LOG_DIRECTORY = '/data/sync/pc_sync/novelai/textual_inversion'
 PROMPT_TEMPLATE_FILE = '/home/hansbug/wtf-projects/stable-diffusion-webui/textual_inversion_templates/subject_filewords.txt'
 
@@ -89,7 +89,7 @@ def is_embedding_exist(name: str) -> bool:
     return os.path.exists(os.path.join(EMBEDDING_DIR, f'{name}.pt'))
 
 
-def train_new_operator(name: str, steps: int = 20000, learning_rate=0.005, batch_size=1, log_per=250):
+def train_new_operator(name: str, steps: int = 12000, learning_rate=0.005, batch_size=1, log_per=250):
     from modules.textual_inversion.textual_inversion import create_embedding, train_embedding
     if not is_embedding_exist(name):
         create_embedding(name, init_text=f'photo of {name} in arknights', num_vectors_per_token=8, overwrite_old=False)
@@ -123,7 +123,17 @@ if __name__ == '__main__':
     hijack.embedding_db.load_textual_inversion_embeddings()
 
     datasets = [
-        'hoshiguma', 'frostnova', 'projekt_red',
+        # 'nightmare', 
+        # 'sakura_haruno', 'ino_yamanaka', 'hinata_hyuga', 'tenten', 
+        # 'sarada_uchiha', 'temari', 'sumire_kakei', 'hanabi_hyuga', 'kurenai_yuhi', 
+        # 'leizi', 'astesia', 
+        # 'gum', 'istina', 'melantha',
+        'provence', 'absinthe', 'aurora', 'feater', 'asbestos', 'beeswax', 'ceylon', 
+        'franka',  'grani', 'heavyrain', 'istina', 'la_pluma', 'liskarm', 'manticore', 
+        'meteorite', 'platinum', 'provence', 'ptilopsis', 'reed', 'robin', 'savage', 
+        'scene', 'sideroca', 'silence', 'snowsant', 'sora', 'swire', 'tomimi', 
+        'whislash', 'whisperain', 
+        # 'hoshiguma', 'frostnova', 'projekt_red',
         # *os.listdir(DATASET_DIRECTORY),
     ]
 
