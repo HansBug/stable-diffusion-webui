@@ -114,6 +114,7 @@ weight_load_location = None if cmd_opts.lowram else "cpu"
 
 batch_cond_uncond = cmd_opts.always_batch_cond_uncond or not (cmd_opts.lowvram or cmd_opts.medvram)
 parallel_processing_allowed = not cmd_opts.lowvram and not cmd_opts.medvram
+print(parallel_processing_allowed)
 xformers_available = False
 config_filename = cmd_opts.ui_settings_file
 
