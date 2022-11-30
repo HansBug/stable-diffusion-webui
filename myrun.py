@@ -130,70 +130,11 @@ if __name__ == '__main__':
     hijack.embedding_db.load_textual_inversion_embeddings()
 
     datasets = [
-        # 'nightmare', 
-        # 'sakura_haruno', 'ino_yamanaka', 'hinata_hyuga', 'tenten', 
-        # 'sarada_uchiha', 'temari', 'sumire_kakei', 'hanabi_hyuga', 'kurenai_yuhi', 
-        # 'leizi', 'astesia', 
-        # 'gum', 'istina', 'melantha',
-        # 'provence', 'absinthe', 'aurora', 
-        # 'ceylon', 
-        # 'franka',  'grani', 'heavyrain', 'istina', 'la_pluma', 'liskarm', 'manticore', 
-        # 'platinum', 'whislash', 'sora', 'ptilopsis', 'reed', 
-        #'robin', 
-        #'savage', 'scene', 'sideroca', 'silence', 
-
-        # 'frostleaf', 
-        # 'snowsant', 'swire', 
-        # 'tomimi', 'whisperain', 
-
-        # 'ambriel', 'beanstalk', 'cuora', 'dobermann', 'gravel', 
-        # 'indigo', 
-        # 'matoimaru', 'meteor', 'myrtle', 'perfumer', 'pinecone', 
-        # 'podenco', 
-        # 'rope_arknights', 'shaw', 'shirayuki', 
-        # 'mandra', 
-
-        # 'sussurro', 'utage', 'vermeil', 'vigna', 
-
-        # 'beagle', 'melantha', 
-        # 'rosmontis', 
-        # 'cardigan', 'fang_arknights', 'lava_arknights', 
-        # 'plume', 'popukar', 'vanilla', 
-
-        # 'silverash', 'phantom', 'thorns', 'mountain', 
-
-        #'pa_15', 'grizzly', 
-        #'five_seven', 'm950a', 'welrod_mkii', 
-
-        # # 'fal', 'vector', 'thompson', '416', 'iws_2000', 'ak_12', 
-        # 'type95', 
-        # 'negev', 'wa2000', 'ro635', '100_shiki', 'aa_12', 'ak_15', 'am_rfb', 
-        # 'an_94', 'aug', 'c_ms', 'gd_dsr_50', 'gr_g11', 'gr_g36c', 'gr_g41', 
-        # 'gr_mg4', 'gr_mp7', 
-        # 'k2', 'kar98k', 'lee_enfield', 'm200', 'mdr', 'ntw_20', 
-        # 'ots_14', 'p90', 'pkp', 'rpk_16', 's_a_t_8', 'saiga_12', 'sr_3mp', 'suomi', 
-        # 'type97', 'vsk_94', 'zas_m21' 
-
-        #'new_jersey', 'vanguard', 'musashi', 'shinano', 'shimakaze', 
-        #'ulrich_von_hutten', 'kronshtadt', 'azuma', 'friedrich_der_grosse', 
-        #'drake', 'hakuryu', 'agir', 'plymouth', 'brest' 
-
-        # 'ricardo_milos', 
-
-        # 'lady_avalon', 'morgan', 'altria_caster', 
-        # 'tam_lin_gawain', 'tam_lin_tristan', 'tam_lin_lancelot', 
-        # 'miyamoto_musashi', 'himiko', 'gudako', 'carmilla', 'yang_guifei', 
-        # 'brynhild', 'utsumi_erice', 'yu_mei_ren', 'koyanskaya_of_light', 
-        # 'leonardo_da_vinci', 'kama', 'zenobia',  'scathach_skadi', 
-        # 'kriemhild', 'charlotte_corday', 'sessyoin_kiara', 
-        # 'abigail_williams', 'ibuki_douji', 'illyasviel_von_einzbern', 
-        # 'jacques_de_molay', 'murasaki_shikibu', 'mysterious_alter_ego_l', 
-        # 'osakabehime', 'sei_shonagon', 'space_ishtar', 'tomoe_gozen', 'van_gogh', 
-        # 'wu_zetian', 'dobrynya_nikitich', 'katsushika_hokusai', 'ortlinde', 
-        # 'sen_no_rikyu', 'koyanskaya_of_darkness', 'thrud', 'vritra', 'europa', 
-        # 'mysterious_idol_x_alter', 
-        'hildr', 'galatea', 'izumo_no_okuni', 
-        'huyan_zhuo', 
+        # 'agir', 'azuma', 'anchorage', 
+        # 'brest', 'drake', 'friedrich_der_grosse', 
+        # 'hakuryu', 'kronshtadt', 
+        'musashi', 'new_jersey', 'plymouth', 
+        'shimakaze', 'shinano', 'ulrich_von_hutten', 'vanguard', 
 
         # 'hoshiguma', 'frostnova', 'projekt_red',
         # *os.listdir(DATASET_DIRECTORY),
